@@ -57,7 +57,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   FlutterPayment flutterPayment = FlutterPayment();
 
   @override
@@ -79,20 +78,23 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: const Center(
-
         child: Column(
-
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-             Text(
+            Text(
               'Initiate UPI payment from Flutter',
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          flutterPayment.launchUpi("test@oksbi", "tester", "100", "test", "INR");
+        onPressed: () {
+          flutterPayment.launchUpi(
+              upi_id: "test@oksbi",
+              name: "tester",
+              amount: "100",
+              message: "test",
+              currency: "INR");
         },
         tooltip: '',
         child: const Icon(Icons.monetization_on_outlined),

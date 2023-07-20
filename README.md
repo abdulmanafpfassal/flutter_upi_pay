@@ -1,39 +1,52 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# [MToast](https://pub.dev/packages/flutter_upi_pay)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+[![pub package](https://img.shields.io/pub/likes/flutter_upi_pay)](https://pub.dev/packages/flutter_upi_pay)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Buy me a coffee
+<a href="https://www.buymeacoffee.com/abdulmanafP" target="_blank" rel="ugc"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee"></a>
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Flutter plugin for UPI Payment.
 
-## Features
+# Supported Platforms
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+> - Android
+> - IOS
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+This plugin is available on Pub: https://pub.dev/packages/flutter_upi_pay.
+
+Add this to `dependencies` in your app's `pubspec.yaml`
+
+```yaml
+flutter_upi_pay: 0.0.1
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+Import package
 ```dart
-const like = 'sample';
+import 'package:flutter_upi_pay/flutter_upi_pay.dart';
 ```
 
-## Additional information
+Create FlutterPayment instance
+```dart
+FlutterPayment flutterPayment = FlutterPayment();
+```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+### Setup options
+
+```dart
+flutterPayment.launchUpi(
+              upi_id: "test@oksbi",
+              name: "tester",
+              amount: "100",
+              message: "test",
+              currency: "INR");
+```
+
+## Preview Image
+
+<img src="https://raw.githubusercontent.com/abdulmanafpfassal/image/master/Screenshot_2023-07-20-15-53-00-05_c31b32364ce19ca8fcd150a417ecce58.jpg" width="320px" />
+
+
